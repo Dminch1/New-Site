@@ -1,0 +1,27 @@
+---
+layout: default
+title: Store
+---
+
+<h1>This is my store page.</h1>
+
+<h4>
+    Here we have a wide variety of products.
+</h4>
+
+<div id="products">
+    <ul>
+        {% for products in site.data.products %}
+
+        <li style="list-style: none;">
+            <p style="text-align: center">{{products.text}}</p>
+
+            <img
+                src="{{products.img}}"
+                alt=""
+            >
+        </li>
+
+        {%endfor%}
+    </ul>
+</div>
